@@ -1,0 +1,19 @@
+{
+  "name": "a04-api",
+  "version": "1.0.0",
+  "description": "API assignment for COMP426 A04",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js --port=5555"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2022-fall/a04-kush2shah.git"
+  },
+  "author": "Kush Shah",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/comp426-2022-fall/a04-kush2shah/issues"
+  },
+  "homepage": "https://github.com/comp426-2022-fall/a04-kush2shah#readme"
+}
