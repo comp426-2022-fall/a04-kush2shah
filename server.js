@@ -7,9 +7,6 @@ import {roll} from "./roll.js";
 import express from 'express';
 const app = express();
 
-// require http module
-const http = require('http');
-
 // require minimist and process arguments
 const args = require('minimist')(process.argv.slice(2));
 
