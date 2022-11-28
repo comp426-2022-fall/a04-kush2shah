@@ -63,6 +63,7 @@ app.get('/app/roll/:sides/:dice/:rolls/', (req, res) => {
 
 // 404 error
 app.get('*', (req, res) => {
+    console.error('error encountered');
     res.status(404).send('404 NOT FOUND');
 })
 
