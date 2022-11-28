@@ -21,6 +21,10 @@ app.get('/', (req, res, next) => {
 
 })
 
+app.get('/app/', (req, res) => {
+    res.status(200).send('200 OK');
+})
+
 app.listen(port, () => {
     console.log(`Server started on port ${port}`)
 });
