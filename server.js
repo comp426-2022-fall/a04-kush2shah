@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // require express
 const express = require('express');
 const app = express();
