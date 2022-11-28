@@ -27,6 +27,27 @@ app.get('/app/roll', (req, res) => {
     res.status(200).send(roll(sides, dice, rolls));
 })
 
+app.get('/app/roll/:sides/', (req, res) => {
+    let sides = req.params.sides;
+    let dice = 2;
+    let rolls = 1;
+    res.status(200).send(roll(sides, dice, rolls));
+})
+
+app.get('/app/roll/:sides/:dice/', (req, res) => {
+    let sides = req.params.sides;
+    let dice = req.params.dice;
+    let rolls = 1;
+    res.status(200).send(roll(sides, dice, rolls));
+})
+
+app.get('/app/roll/:sides/:dice/:rolls/', (req, res) => {
+    let sides = req.params.sides;
+    let dice = req.params.dice;
+    let rolls = req.params.rolls;
+    res.status(200).send(roll(sides, dice, rolls));
+})
+
 app.listen(port, () => {
     console.log(`Server started on port ${port}`)
 });
