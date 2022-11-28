@@ -16,13 +16,15 @@ const args = require('minimist')(process.argv.slice(2));
 // set port to 5000 if no argument is given
 const port = args.port || 5000;
 
-
-app.get('/', (req, res, next) => {
-
-})
-
 app.get('/app/', (req, res) => {
     res.status(200).send('200 OK');
+})
+
+app.get('/app/roll', (req, res) => {
+    let sides = 6;
+    let dice = 2;
+    let rolls = 1;
+    res.status(200).send(roll(sides, dice, rolls));
 })
 
 app.listen(port, () => {
