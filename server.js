@@ -52,9 +52,9 @@ app.get('/app/roll/:sides/:dice/', (req, res) => {
 
 // endpoint for sides, dice, and rolls
 app.get('/app/roll/:sides/:dice/:rolls/', (req, res) => {
-    let sides = req.params.sides;
-    let dice = req.params.dice;
-    let rolls = req.params.rolls;
+    let sides = parseInt(req.params.sides);
+    let dice = parseInt(req.params.dice);
+    let rolls = parseInt(req.params.rolls);
     res.status(200).send(roll(sides, dice, rolls));
 })
 
