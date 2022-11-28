@@ -27,9 +27,16 @@ app.get('/app/roll', (req, res) => {
     res.status(200).send(roll(sides, dice, rolls));
 })
 
+app.post('/app/roll', (req, res) => {
+    let sides = 6 || parseInt(req.body.sides);
+    let dice = 2 || parseInt(req.body.dice);
+    let rolls = 1 || parseInt(req.body.rolls);
+    res.status(200).send(roll(sides, dice, rolls));
+})
+
 // endpoint for sides
 app.get('/app/roll/:sides/', (req, res) => {
-    let sides = req.params.sides;
+    let sides = parseInt(req.params.sides);
     let dice = 2;
     let rolls = 1;
     res.status(200).send(roll(sides, dice, rolls));
