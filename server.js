@@ -20,14 +20,14 @@ app.get('/app/', (req, res) => {
 })
 
 // default endpoint
-app.get('/app/roll', (req, res) => {
+app.get('/app/roll/', (req, res) => {
     let sides = 6;
     let dice = 2;
     let rolls = 1;
     res.status(200).send(roll(sides, dice, rolls));
 })
 
-app.post('/app/roll', (req, res) => {
+app.post('/app/roll/', (req, res) => {
     let sides = 6 || parseInt(req.body.sides);
     let dice = 2 || parseInt(req.body.dice);
     let rolls = 1 || parseInt(req.body.rolls);
