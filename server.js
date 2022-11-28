@@ -14,6 +14,9 @@ const args = minimist(process.argv.slice(2));
 // set port to 5000 if no argument is given
 const port = args.port || 5000;
 
+// parse arguments as url encoded
+app.use(express.urlencoded({extended: true}));
+
 // check endpoint
 app.get('/app/', (req, res) => {
     res.status(200).send('200 OK');
