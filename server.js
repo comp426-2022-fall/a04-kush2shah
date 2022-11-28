@@ -8,7 +8,8 @@ import express from 'express';
 const app = express();
 
 // require minimist and process arguments
-const args = require('minimist')(process.argv.slice(2));
+import minimist from 'minimist';
+const args = minimist(process.argv.slice(2));
 
 // set port to 5000 if no argument is given
 const port = args.port || 5000;
