@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // import roll function
-import {roll} from "./lib/roll.js";
+import {roll} from "./roll.js";
 
 // require express
 const express = require('express');
