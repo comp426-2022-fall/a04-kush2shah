@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // import roll function
-import {roll} from "./roll.js";
+import {roll} from "./lib/roll.js";
 
 // require express
 import express from 'express';
@@ -65,5 +65,5 @@ app.get('*', (req, res) => {
 
 // start server
 app.listen(port, () => {
-    console.log()
+    console.log(`Server started on port ${port}`)
 });
