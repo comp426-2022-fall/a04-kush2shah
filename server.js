@@ -4,7 +4,7 @@
 import {roll} from "./roll.js";
 
 // require express
-const express = require('express');
+import express from 'express';
 const app = express();
 
 // require http module
