@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/comp426-2022-fall/a04-kush2shah/issues"
   },
-  "homepage": "https://github.com/comp426-2022-fall/a04-kush2shah#readme"
+  "homepage": "https://github.com/comp426-2022-fall/a04-kush2shah#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
