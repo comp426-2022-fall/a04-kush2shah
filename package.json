@@ -20,6 +20,7 @@
   "dependencies": {
     "curl": "^0.1.4",
     "express": "^4.18.2",
-    "minimist": "^1.2.7"
+    "minimist": "^1.2.7",
+    "shuf": "^1.0.2"
   }
 }

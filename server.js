@@ -14,10 +14,12 @@ const args = minimist(process.argv.slice(2));
 // set port to 5000 if no argument is given
 const port = args.port || 5000;
 
+// check endpoint
 app.get('/app/', (req, res) => {
     res.status(200).send('200 OK');
 })
 
+// default endpoint
 app.get('/app/roll', (req, res) => {
     let sides = 6;
     let dice = 2;
@@ -25,6 +27,7 @@ app.get('/app/roll', (req, res) => {
     res.status(200).send(roll(sides, dice, rolls));
 })
 
+// endpoint for sides
 app.get('/app/roll/:sides/', (req, res) => {
     let sides = req.params.sides;
     let dice = 2;
@@ -32,6 +35,7 @@ app.get('/app/roll/:sides/', (req, res) => {
     res.status(200).send(roll(sides, dice, rolls));
 })
 
+// endpoint for sides and dice
 app.get('/app/roll/:sides/:dice/', (req, res) => {
     let sides = req.params.sides;
     let dice = req.params.dice;
@@ -39,6 +43,7 @@ app.get('/app/roll/:sides/:dice/', (req, res) => {
     res.status(200).send(roll(sides, dice, rolls));
 })
 
+// endpoint for sides, dice, and rolls
 app.get('/app/roll/:sides/:dice/:rolls/', (req, res) => {
     let sides = req.params.sides;
     let dice = req.params.dice;
@@ -46,6 +51,12 @@ app.get('/app/roll/:sides/:dice/:rolls/', (req, res) => {
     res.status(200).send(roll(sides, dice, rolls));
 })
 
+// 404 error
+app.get('*', (req, res) => {
+    res.status(404).send('404 Not Found');
+})
+
+// start server
 app.listen(port, () => {
     console.log(`Server started on port ${port}`)
 });
